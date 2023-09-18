@@ -1,0 +1,30 @@
+Source: python-fido2
+Maintainer: Debian Authentication Maintainers <pkg-auth-maintainers@lists.alioth.debian.org>
+Uploaders: nicoo <nicoo@debian.org>
+Section: python
+Priority: optional
+Rules-Requires-Root: no
+Standards-Version: 4.5.1
+Build-Depends: debhelper-compat (= 13),
+               dh-python,
+               pybuild-plugin-pyproject,
+               python3-poetry,
+               python3-all,
+               python3-cryptography,
+               python3-mock,
+               python3-setuptools
+Homepage: https://developers.yubico.com/python-fido2
+
+Package: python3-fido2
+Architecture: all
+Depends: ${misc:Depends},
+         ${python3:Depends}
+Breaks: python3-ykman (<< 4~)
+Provides: python3-fido2-api (= 0.9)
+Description: Python library for implementing FIDO 2.0
+ A Python library for communicating with a FIDO device over USB HID as 
+ well as verifying attestation and assertion signatures.
+ .
+ FIDO (Fast Identity Online) is a set of protocols, including U2F (Universal 2nd
+ Factor) and UAF (Universal Authentication Framework), that support usable,
+ strong authentication of users using hardware tokens.

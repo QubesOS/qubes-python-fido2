@@ -1,0 +1,14 @@
+vm-bookworm:
+  deb:
+    build:
+    - debian-pkg/debian
+vm-trixie:
+  deb:
+    build:
+    - debian-pkg/debian
+source:
+  files:
+  - url: https://github.com/Yubico/python-fido2/releases/download/@VERSION@/fido2-@VERSION@.tar.gz
+    signature: https://github.com/Yubico/python-fido2/releases/download/@VERSION@/fido2-@VERSION@.tar.gz.sig
+    pubkeys:
+    - debian-pkg/debian/upstream/signing-key.asc

@@ -1,0 +1,117 @@
+python-fido2 (1.1.2-1) unstable; urgency=medium
+
+  * New upstream version 1.1.2
+    Closes: #1042109
+  * Adjust for poetry build
+
+ -- Marek Marczykowski-Górecki <marmarek@invisiblethingslab.com>  Mon, 11 Sep 2023 02:54:54 +0200
+
+python-fido2 (0.9.1-1) unstable; urgency=high (RC)
+
+  * New upstream version 0.9.1
+    Adds new CTAP error codes and improve handling of unknown codes.
+
+  * Provides an API version for managing dependencies
+  * Breaks yubikey-manager 3.x, due to API changes in 0.9.x
+
+ -- nicoo <nicoo@debian.org>  Wed, 03 Feb 2021 16:09:18 +0100
+
+python-fido2 (0.9.0-1) unstable; urgency=medium
+
+  * New upstream version (2021-01-20)
+    + Client API changed to better support extensions
+
+  * d/rules: Re-enable testsuite
+  * d/copyright: Update copyright date ranges
+
+ -- nicoo <nicoo@debian.org>  Sun, 31 Jan 2021 01:30:32 +0100
+
+python-fido2 (0.8.1-2) unstable; urgency=low
+
+  * python3-fido2: Drop Recommends: libu2f-udev
+
+  * Update maintainer's name and email address
+  * Update upstream's signing key
+  * Upgrade to debhelper compatibility level 13
+
+  * d/copyright:
+    + Set Upstream-Contact to Yubico's OSS maintainers role
+    + Update package authorship info
+  * d/control: Declare compliance with policy v4.5.1
+
+ -- nicoo <nicoo@debian.org>  Thu, 14 Jan 2021 18:56:21 +0100
+
+python-fido2 (0.8.1-1) unstable; urgency=medium
+
+  * New upstream release (2019-11-25)
+
+  * debian/upstream: Update signing keys
+  * Declare compliance with policy v4.5.0.
+    No change required
+
+ -- nicoo <nicoo@debian.org>  Thu, 30 Jan 2020 23:33:58 +0100
+
+python-fido2 (0.7.3-1) unstable; urgency=medium
+
+  * New upstream release (2019-10-24)
+    + Bugfixes
+    + Add support for TPM attestation format
+
+ -- nicoo <nicoo@debian.org>  Sat, 26 Oct 2019 12:35:10 +0200
+
+python-fido2 (0.7.1-1) unstable; urgency=medium
+
+  * New upstream version (2019-09-20)
+  * Declare compliance with policy v4.4.1
+    No change required.
+
+ -- nicoo <nicoo@debian.org>  Fri, 18 Oct 2019 16:13:59 +0200
+
+python-fido2 (0.7.0-1) unstable; urgency=low
+
+  * New upstream version 0.7.0 (2019-06-17)
+    + New features
+      - Add support for NFC devices using PCSC.
+      - Add support for the hmac-secret Authenticator extension.
+      - Client: Expose CTAP2 Info object as Fido2Client.info.
+      - Server:
+          Add support for AuthenticatorAttachment
+          Add support for more key algorithms
+
+    + Bug fixes
+      - Don’t fail if CTAP2 Info contains unknown fields.
+      - Honor max credential ID length and number of credentials.
+
+  * debian/rules: Make dh_missing fail the build
+  * debian/changelog: Fix typo in v0.5.0-1
+
+ -- nicoo <nicoo@debian.org>  Sat, 13 Jul 2019 14:13:09 +0200
+
+python-fido2 (0.5.0-1) unstable; urgency=medium
+
+  * New upstream version 0.5.0 (2018-12-21)
+    + Backwards-compatibility broken in minor ways
+    + Now support implementing FIDO2/U2F-capable servers
+    + Update debian/copyright
+
+  * debian/control
+    + Update uploader's email address
+    + Fixup upstream's homepage
+    + Remove duplicate field
+    + Declare compliance with policy v4.3.0.
+      No change required
+
+ -- nicoo <nicoo@debian.org>  Thu, 07 Feb 2019 21:15:23 +0100
+
+python-fido2 (0.3.0-2) unstable; urgency=high
+
+  * Drop the pydist file
+
+ -- nicoo <nicoo@debian.org>  Fri, 03 Aug 2018 00:26:33 +0800
+
+python-fido2 (0.3.0-1) unstable; urgency=medium
+
+  * Initial Debian package (upstream release 2018-04-20)
+    Closes: #900940
+
+ -- nicoo <nicoo@debian.org>  Wed, 25 Jul 2018 16:50:29 +0800
