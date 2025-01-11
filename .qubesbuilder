@@ -6,10 +6,6 @@ vm-trixie:
   deb:
     build:
     - debian-pkg/debian
-vm-jammy:
-  deb:
-    build:
-    - debian-pkg/debian
 source:
   files:
   - url: https://github.com/Yubico/python-fido2/releases/download/@VERSION@/fido2-@VERSION@.tar.gz
